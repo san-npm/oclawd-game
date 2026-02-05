@@ -1,0 +1,11 @@
+LuxProvide Team,
+
+We are writing to express our interest in exploring a potential partnership between Aleph Cloud and MeluXina infrastructure. As a decentralized cloud provider with presence in both France and Luxembourg, we are developing an AI infrastructure platform specifically designed for AI agent workloads.
+
+Our platform combines content-addressable storage with compute capabilities, enabling users to deploy AI agents with enhanced privacy, cost efficiency, and censorship resistance. We have successfully demonstrated 80%+ cost savings compared to traditional centralized cloud providers while maintaining high performance and data sovereignty.
+
+We believe there are significant opportunities for collaboration, particularly in deploying AI agent workloads on MeluXina infrastructure. Our systems are well-suited for scientific computing use cases, large-scale data processing, and distributed agent orchestration.
+
+We would welcome the opportunity to discuss how Aleph Cloud could complement the MeluXina ecosystem and what collaborative opportunities might exist.
+
+Best regards,

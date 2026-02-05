@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "skills": {
+    "moltbook-interact": {
+      "version": "1.0.1",
+      "installedAt": 1769966478327
+    },
+    "moltbook-registry": {
+      "version": "1.0.3",
+      "installedAt": 1769966484190
+    },
+    "remotion-video-toolkit": {
+      "version": "1.4.0",
+      "installedAt": 1770045012676
+    },
+    "react-expert": {
+      "version": "0.1.0",
+      "installedAt": 1770045017135
+    },
+    "frontend-design-ultimate": {
+      "version": "1.0.0",
+      "installedAt": 1770045021808
+    },
+    "vercel-deploy-claimable": {
+      "version": "1.0.0",
+      "installedAt": 1770045033564
+    },
+    "agent-directory": {
+      "version": "1.2.0",
+      "installedAt": 1770045049585
+    },
+    "apple-notes": {
+      "version": "1.0.0",
+      "installedAt": 1770045501334
+    },
+    "apple-reminders": {
+      "version": "1.0.0",
+      "installedAt": 1770045506334
+    },
+    "blogwatcher": {
+      "version": "1.0.0",
+      "installedAt": 1770045511366
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1770045516231
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1770047193647
+    },
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1770047405728
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1770047647050
+    },
+    "telegram": {
+      "version": "1.0.1",
+      "installedAt": 1770047650961
+    },
+    "slack": {
+      "version": "1.0.0",
+      "installedAt": 1770047654493
+    },
+    "discord": {
+      "version": "1.0.1",
+      "installedAt": 1770047657915
+    },
+    "crypto-wallet": {
+      "version": "1.0.1",
+      "installedAt": 1770047661962
+    },
+    "topic-monitor": {
+      "version": "1.1.0",
+      "installedAt": 1770047666373
+    },
+    "youtube-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1770047669950
+    },
+    "security-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1770047673587
+    },
+    "github-action-gen": {
+      "version": "1.0.2",
+      "installedAt": 1770047678306
+    },
+    "coding-agent": {
+      "version": "1.0.1",
+      "installedAt": 1770051827557
+    },
+    "humanizer": {
+      "version": "1.0.0",
+      "installedAt": 1770051834047
+    },
+    "proactive-agent": {
+      "version": "1.2.4",
+      "installedAt": 1770051839905
+    },
+    "marketing-mode": {
+      "version": "1.0.0",
+      "installedAt": 1770051843969
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1770226215827
+    },
+    "farcaster-agent": {
+      "version": "1.2.0",
+      "installedAt": 1770296795667
+    }
+  }
+}

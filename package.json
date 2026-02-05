@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "googleapis": "^171.0.0",
+    "imap": "^0.8.19",
+    "mailparser": "^3.9.3",
+    "nodemailer": "^7.0.13",
+    "simple-node-logger": "^21.8.12",
+    "viem": "^2.45.1"
+  }
+}
