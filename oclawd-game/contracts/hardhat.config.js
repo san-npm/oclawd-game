@@ -1,6 +1,6 @@
-const { config } = require("hardhat");
+require("@nomicfoundation/hardhat-toolbox");
 
-config.setupAll({
+module.exports = {
   networks: {
     hardhat: {
       chainId: 31337,
@@ -9,8 +9,7 @@ config.setupAll({
       url: "https://sepolia.base.org",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 84532,
-      gasPrice: 20000000000, // 20 Gwei
-      gasMultiplier: 1.2,
+      gasPrice: 1000000000, // 1 Gwei (lower for testnet)
     },
     "base-fork": {
       url: "https://sepolia.base.org",
@@ -44,6 +43,4 @@ config.setupAll({
     cache: "./cache",
     artifacts: "./artifacts",
   },
-});
-
-module.exports = config;
+};
