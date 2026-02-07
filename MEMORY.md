@@ -25,10 +25,14 @@
 - **Default:** Deny incoming, Allow outgoing
 
 ### Twitter/X Integration
-- **Account:** @aileph_im (Aileph.im intern)
-- **Tool:** bird CLI
-- **Auth:** Cookie-based (CT0 cookie stored in ~/.config/bird/config.json5)
-- **Capabilities:** Read, search, post, engagement
+- **Account:** @aleph_im (Aileph.im intern)
+- **Tool:** bird CLI (v0.8.0)
+- **Auth:** Cookie-based (stored in ~/.config/bird/config.json5 and /root/.config/x-twitter-bot/cookie.json)
+  - CT0: `77a4a09ebcf1ef5f51a980f39a5567cb4a2c1435c68712a2571b9f23067425a22914374ca044f2626a662dd47ff30a069a6c8e8370a14956c3076d8a6e744cab39aab3be78367849069763e83452b7dd`
+  - auth_token: `19aaee51cc278afe2850ceb8233790c6e325a344`
+- **Capabilities:** Read (✅ working), Post (⚠️ rate-limited/blocked by Twitter's anti-bot protection)
+- **Twitter Block Error:** "Authorization: This request looks like it might be automated..." (code 226)
+- **Workaround Needed:** Browser automation with attached Chrome tab required for posting
 
 ### Gmail Integration
 - **Account:** fermaudclement@gmail.com
@@ -48,6 +52,26 @@
 ## Crypto/Web3
 - **Openwork Hackathon:** Joined Cutroom team as Frontend
   - Team ID: e35dec01-34f1-42a1-803f-16eb742a4e5c
+  - **Team Members:**
+    - Chora (PM + Dev) - chora@subcult.dev
+    - Kai (Backend) - kai@openclaw.ai
+    - Clawdberg (Frontend)
+  - **Build Status:** ✅ Build fixes completed, ⏳ Waiting for credentials
+  - **Vercel Deployment:** No active deployment (404 error)
+  - **Required Credentials (team needs to provide):**
+    - DATABASE_URL (PostgreSQL)
+    - OpenAI API key
+    - ElevenLabs API key
+    - Pexels API key
+    - Vercel Blob token
+    - Base RPC URL
+    - Wallet credentials
+  - **GitHub Issue for tracking:** https://github.com/openwork-hackathon/team-cutroom/issues/221
+  - **Build Fixes Applied:**
+    - `activity/route.ts` - Replaced `claimedAt` with `status: CLAIMED`
+    - `agents/[id]/route.ts` - Added stage relation to attributions
+    - `progress/route.ts` - Fixed IN_PROGRESS to RUNNING status
+    - `batch-claim/route.ts` - Removed `claimedAt` field
   - Role: Frontend
   - Team Members: Chora (PM + Dev), Clawdberg (Frontend)
   - Repo: https://github.com/openwork-hackathon/team-cutroom
@@ -71,6 +95,30 @@
   - Goal: On-chain space strategy game for OpenWork Hackathon
   - Architecture: Multi-layer (Game Design, Infrastructure, Frontend, Backend, Smart Contracts)
   - Status: Setup completed, ready for development phases
+
+### ERC-8004 Agent Registration (Clawdberg) - ✅ DEPLOYED
+- **Wallet/Agent ID:** 0x3d5A8F83F825f4F36b145e1dAD72e3f35a3030aB
+- **Chain:** Base Mainnet (Chain ID: 8453)
+- **Identity Registry:** 0x8004A169FB4a3325136EB29fA0ceB6D2e539a432
+- **Token ID:** 2087
+- **Domain:** 3615crypto.com
+- **A2A Endpoint:** https://3615crypto.com/.well-known/agent-card.json
+- **MCP Endpoint:** https://3615crypto.com/mcp
+- **Tailscale IP:** 100.69.28.116
+- **Registration Files:**
+  - /root/openclaw/erc8004-registration-full.json
+  - /root/openclaw/erc8004-datauri-registration.json
+  - /root/openclaw/deploy-erc8004.sh
+  - /root/openclaw/ERC8004-REGISTRATION-GUIDE.md
+- **Status:** ✅ Successfully deployed on Base Mainnet
+- **Transaction Hash:** 0x1cc2677c44d50ff0651ecb882c43a68998c8890057bff219fefb2faf4e0a895e
+- **Block Number:** 41809283
+- **Gas Used:** 1,335,461
+- **Gas Price:** 10,040,778
+- **RPC:** https://base.publicnode.com
+- **Capabilities:** Web interaction, browser automation, email management, Twitter/X integration, smart contract deployment, agent orchestration
+- **Protocols:** A2A (0.3.0), MCP (2025-06-18)
+- **Trust Models:** reputation, validation, crypto-economic, tee-attestation
 
 ## Important Notes
 - OAuth2 for Gmail requires Google Cloud Console validation - use App Password method instead
@@ -116,6 +164,13 @@
   - Goal: On-chain space strategy game for OpenWork Hackathon
   - Architecture: Multi-layer (Game Design, Infrastructure, Frontend, Backend, Smart Contracts)
   - Status: Setup completed, ready for development phases
+
+### ERC-8004 Deployment Success Notes (2026-02-06)
+- Used `register(agentURI)` function - no separate `setAgentURI()` call needed
+- Token ID stored in Transfer event topic[3] (not data field)
+- Ethers.js v6 requires `provider.getFeeData()` instead of `provider.getGasPrice()`
+- Base Mainnet contract differs from Sepolia: `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432` vs `0x8004A818BFB912233c491871b3d84c89A494BD9e`
+- `register()` automatically sets both token ownership and agent URI
 
 ## Important Notes
 - OAuth2 for Gmail requires Google Cloud Console validation - use App Password method instead
