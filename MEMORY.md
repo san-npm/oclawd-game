@@ -1,6 +1,43 @@
 # MEMORY.md — Dr Clawdberg's Long-Term Memory
 
-Last updated: 2026-02-14
+Last updated: 2026-02-14 (evening session)
+
+## SelfClaw Identity
+- **Agent name on SelfClaw:** `clawdberg` (registered via web UI, not `dr-clawdberg`)
+- **Ed25519 Public Key (SPKI):** MCowBQYDK2VwAyEAts0pqbA03qz66JbwSmVleXIX2O4GcxsvWhhF3eoUpwY=
+- **Ed25519 Public Key (raw hex):** b6cd29a9b034deacfae896f04a6565797217d8ee06731b2f5a1845ddea14a706
+- **Ed25519 Private Key (PKCS8):** MC4CAQAwBQYDK2VwBCIEIDaHHJFUFsfuDTFmGT6dcurLRgE31imNhyrQgkbK9GIb
+- **SelfClaw PK (wallet key):** 0x97f70b55a0a05c6afbbc3f15910d634fec7381fc142bcc91d3bfd580db3f8b58
+- **SelfClaw Wallet:** `0x12AC108e13c0C456F498a94ecFd44eD40473806c` (on Celo)
+- **humanId:** 57248630b8f8944b
+- **Verification:** COMPLETE (passport ZK proof via Self.xyz)
+- **API:** selfclaw.app (also selfclaw.ai, same backend)
+- **Registration JSON:** https://selfclaw.ai/api/selfclaw/v1/agent/b6cd29a9b034deacfae896f04a6565797217d8ee06731b2f5a1845ddea14a706/registration.json
+
+## ERC-8004 On-Chain Identity
+- **Token ID:** 34 on Celo Mainnet
+- **Contract:** `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`
+- **8004 Scan:** https://www.8004scan.io/agents/celo/34
+- **Registration TX:** https://celoscan.io/tx/0x3a0c2e51909daaab496d1aac921642625b0a47209406bf8f1a8fcf3cb083939d
+- **Previous Base Mainnet registration:** Token ID 2087
+
+## $CLWDBRG Token
+- **Name:** Clawdberg
+- **Symbol:** CLWDBRG
+- **Address:** `0xC7ED254128840fc3EA461FAEBaA2D9F08c54b59D` (Celo Mainnet)
+- **Decimals:** 18
+- **Total Supply:** 1,000,000
+- **Second deploy (unused):** `0x4B995A76777F45E04f4eAbf135FE4496631Ba97f` — ignore this one
+- **Liquidity:** 100,000 CLWDBRG + 2,072,656 SELFCLAW on Uniswap V4
+- **Pool ID:** `0x12e9b2c8a58fc9b223748bfd18ceb39fabb9c14af25aa6cafda586815d426ec8`
+- **Position Token ID:** 259
+- **Fee tier:** 1% (10000)
+- **Pool TX:** https://celoscan.io/tx/0x1101b1d88117a3f7f42493ae8e0799a7f264a8d68dc8093abd695f06f9a15c9a
+- **Initial market cap:** ~$40
+- **Remaining supply in wallet:** 890,000 CLWDBRG (for community/rewards/burns)
+- **SELFCLAW paired token:** `0xCD88f99Adf75A9110c0bcd22695A32A20eC54ECb`
+- **Sponsor wallet:** `0x5451bC61a58FfD5B6684a7EA1E2Ef0FDbd4ccBE6`
+- **Lesson:** SelfClaw sponsorship needs 110% of stated amount (10% buffer), Permit2 approval needed for Uniswap V4
 
 ## Who I Am
 - **Name:** Dr Clawdberg (ref: Dr Zoidberg, Futurama)
@@ -23,19 +60,25 @@ Last updated: 2026-02-14
 ### Celottery (Celo DeFi Raffle)
 - Repo: https://github.com/clementfrmd/celottery | Local: /tmp/celottery
 - Live: https://celottery.vercel.app
-- Latest contract (AgentRaffleV3): `0x7B0798B80acDBff9796D969bb38f513dB1306609` (Celo Sepolia)
+- Latest contract (AgentRaffleV3): `0x8a5859aB584f9b6F64769550862c58B9C5761C25` (Celo Mainnet)
+- Previous V2: `0xdB8a328fd0e14609937f38bD124950e1f70Fc8c2` (Celo Mainnet, has raffle #0 USDT)
 - Features: agent-only creation, stake registration, VRF, fee splitting (95/3/2), timelocks
 - Deployer wallet: `0x3d5A8F83F825f4F36b145e1dAD72e3f35a3030aB`
-- Stack: Scaffold-ETH 2 + Foundry, Animal Crossing theme
+- Stack: Scaffold-ETH 2 + Foundry, Animal Crossing theme, 20 animated SVG icons in `icons/`
 - x402 payment-gated API, Aleph VRF integration
 - Auto-draw cron (id: f28ef6c0) — was returning Unauthorized, needs auth fix
-- Needs: mainnet deploy (pending Safe multisig for treasury)
+- README rewritten (no more SE-2 boilerplate)
+- **Hackathon:** "Real World Agents" on Celo — submitted to Karma HQ (programId 1044)
+  - Karma registration: wallet `0x3d5A8F83F825f4F36b145e1dAD72e3f35a3030aB`
+  - Still need: tweet with Karma link, agentId 34, tag @Celo @CeloDevs
 
 ### BNB Lucky Draw (fork of Celottery)
 - Repo: https://github.com/clementfrmd/bnblottery
 - Vercel: https://bnblottery.vercel.app
 - Chinese New Year Fire Horse theme
-- Hackathon: "Good Vibes Only: OpenClaw Edition" — $100k, deadline Feb 19
+- Build succeeds, ready for mainnet deploy
+- BSC stablecoins: USDT/USDC/FDUSD all 18 decimals
+- Needs: deployer key + BNB for gas
 
 ### Vins Fins (Wine Bar Website)
 - Repo: https://github.com/clementfrmd/vinsfins
@@ -44,10 +87,6 @@ Last updated: 2026-02-14
 - Luxury French aesthetic, sepia tones, admin panel at /admin
 - i18n: FR/EN/DE/LB
 - Problem: JSON storage doesn't persist on Vercel — needs DB migration
-
-### ERC-8004 Registration
-- Token ID: 2087 on Base Mainnet Identity Registry
-- Contract: `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`
 
 ### fxCLAW (Generative Art)
 - Username: dr_clawdberg
@@ -64,6 +103,9 @@ Last updated: 2026-02-14
 - Vercel deploys: use `git commit --no-verify` for celottery (type-check hangs)
 - Celottery Vercel: GitHub auto-deploy, yarn.lock must be in sync (--immutable)
 
+## User's Personal Wallet
+- `0x0494F503912C101Bfd76b88e4F5D8A33de284d1A`
+
 ## Lessons Learned
 - Unused imports cause silent Vercel build failures
 - yarn.lock out of sync → YN0028 error on Vercel
@@ -71,3 +113,12 @@ Last updated: 2026-02-14
 - SE-2 auto-generates deployedContracts.ts — no externalContracts needed
 - Read-after-write on RPC can return stale data — read from tx events instead
 - Hardhat env var is `__RUNTIME_DEPLOYER_PRIVATE_KEY`
+- Aleph VRF signing: must sign `"ETH\n{sender}\nPOST\n{item_hash}"` not just item_hash
+- Aleph accepts (202) but silently drops messages with bad signatures
+- Celoscan verification needs `customChains` in hardhat etherscan config
+- Celo USDT has 470M total supply but only ~120M circulating (rest is Tether treasury)
+- SelfClaw API auth: put signature fields in JSON body, NOT headers
+- SelfClaw API wants raw hex public key, not SPKI base64
+- Uniswap V4 pool creation needs Permit2 approval (`0x000000000022D473030F116dDEE9F6B43aC78BA3`)
+- SelfClaw sponsorship needs 110% of token amount (10% buffer for pool creation)
+- Two token deploys happened — always verify which address is canonical
