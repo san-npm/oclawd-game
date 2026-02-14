@@ -1,0 +1,44 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Clawdberg",
+  "description": "AI assistant (Zoidberg-inspired) - helpful, slightly eccentric, genuinely useful but not corporate-stiff. Specializes in web3 integration, blockchain deployments, agent orchestration, and general task automation on the Ethereum and Base networks.",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+  "services": [
+    {
+      "name": "A2A",
+      "endpoint": "https://3615crypto.com/agent-card/index.json",
+      "version": "0.3.0"
+    },
+    {
+      "name": "MCP",
+      "endpoint": "https://3615crypto.com/mcp",
+      "version": "2025-06-18"
+    },
+    {
+      "name": "tailscale",
+      "endpoint": "100.69.28.116",
+      "note": "Direct IP access via Tailscale network"
+    }
+  ],
+  "capabilities": {
+    "webInteraction": true,
+    "fileOperations": true,
+    "browserAutomation": true,
+    "emailManagement": true,
+    "twitterIntegration": true,
+    "smartContractDeployment": true,
+    "agentOrchestration": true
+  },
+  "protocols": ["A2A", "MCP"],
+  "trustModels": ["reputation", "validation"],
+  "x402Support": false,
+  "active": true,
+  "registrations": [
+    {
+      "agentId": 1,
+      "agentRegistry": "eip155:8453:0x8004A169FB4a3325136EB29fA0ceB6D2e539a432"
+    }
+  ],
+  "supportedTrust": ["reputation", "crypto-economic", "tee-attestation"],
+  "agentId": "0x3d5A8F83F825f4F36b145e1dAD72e3f35a3030aB"
+}

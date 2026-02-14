@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.6-3",
+    "lastTouchedAt": "2026-02-09T15:52:11.286Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-09T15:52:11.277Z",
+    "lastRunVersion": "2026.2.6-3",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "libertai": {
+        "baseUrl": "https://api.libertai.io/v1",
+        "apiKey": "3d76952e945260acabc2aa550701f251",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "glm-4.7",
+            "name": "GLM 4.7",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 76000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "libertai/glm-4.7"
+      },
+      "models": {
+        "libertai/glm-4.7": {
+          "alias": "glm-4.7"
+        }
+      },
+      "workspace": "/root/openclaw",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "name": "main",
+        "workspace": "/root/openclaw",
+        "agentDir": "/root/.openclaw/agents/main/agent"
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "apiKey": "BSAnJ1pBJGSZ5gq7QAqO7RzFWqfu1Ft"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "botToken": "8526026646:AAF50be6Dm9pqf2yxPWGYuRjjmYaj2eRByo",
+      "allowFrom": [
+        "735726338"
+      ],
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "57c594abf8a3a069a6a105e8ef66d2faea170d69d397a319"
+    },
+    "tailscale": {
+      "mode": "serve",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}

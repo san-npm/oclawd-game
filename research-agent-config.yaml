@@ -1,0 +1,46 @@
+# Research Agent Configuration
+agent_name: research_agent
+schedule: "0 8 * * *"  # Daily at 8 AM
+timezone: "UTC"
+enabled: true
+
+tasks:
+  competitor_monitoring:
+    frequency: daily
+    competitors:
+      - aws
+      - google_cloud
+      - azure
+    output: json
+
+  trend_identification:
+    frequency: daily
+    sources:
+      - twitter
+      - reddit
+      - tech_blogs
+    hashtags:
+      - AI
+      - Cloud
+      - Web3
+      - GPU
+      - ML
+    output: markdown
+
+  keyword_research:
+    frequency: daily
+    target_keywords:
+      - decentralized cloud
+      - AI infrastructure
+      - GPU cloud
+      - machine learning
+    output: csv
+
+  blog_topic_generation:
+    frequency: daily
+    quantity: 2
+    criteria:
+      - trending
+      - high_search_volume
+      - low_competition
+    output: json

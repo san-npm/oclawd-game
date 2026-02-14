@@ -1,0 +1,42 @@
+# SEO Agent Configuration
+agent_name: seo_agent
+schedule: "0 10 * * 0"  # Sundays at 10 AM
+timezone: "UTC"
+enabled: true
+
+tasks:
+  content_audit:
+    frequency: weekly
+    checks:
+      - meta_tags
+      - headings_structure
+      - keyword_density
+      - internal_links
+      - readability_score
+    output: json
+
+  schema_markup:
+    frequency: weekly
+    types:
+      - Article
+      - Organization
+      - SoftwareApplication
+    output: json-ld
+
+  keyword_ranking:
+    frequency: daily
+    target_keywords:
+      - decentralized cloud
+      - AI infrastructure
+      - GPU cloud
+      - machine learning infrastructure
+    output: csv
+
+  optimization_recommendations:
+    frequency: weekly
+    focus_areas:
+      - on_page_seo
+      - content_optimization
+      - meta_description
+      - title_tags
+    output: markdown

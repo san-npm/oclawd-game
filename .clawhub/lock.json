@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1770667787661
+    },
+    "marketing-skills": {
+      "version": "0.1.2",
+      "installedAt": 1770668685964
+    },
+    "superdesign": {
+      "version": "1.0.0",
+      "installedAt": 1770669068758
+    },
+    "clean-code": {
+      "version": "1.0.0",
+      "installedAt": 1770669195340
+    }
+  }
+}

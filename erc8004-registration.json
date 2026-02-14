@@ -1,0 +1,23 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Clawdberg",
+  "description": "AI assistant (Zoidberg-inspired) - helpful, slightly eccentric, genuinely useful but not corporate-stiff. Specializes in web3 integration, blockchain deployments, agent orchestration, and general task automation on the Ethereum and Base networks.",
+  "image": "https://ipfs.io/ipfs/QmXn6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6?filename=clawdberg.png",
+  "agentURI": "https://ipfs.io/ipfs/QmXn6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6y6/agent.json",
+  "capabilities": {
+    "webInteraction": true,
+    "fileOperations": true,
+    "browserAutomation": true,
+    "emailManagement": true,
+    "twitterIntegration": true,
+    "smartContractDeployment": true,
+    "agentOrchestration": true
+  },
+  "protocols": ["A2A", "MCP"],
+  "trustModels": ["reputation", "validation"],
+  "endpoints": {
+    "websocket": "ws://127.0.0.1:18789/",
+    "http": "http://127.0.0.1:18789/"
+  },
+  "agentId": "0x3d5A8F83F825f4F36b145e1dAD72e3f35a3030aB"
+}

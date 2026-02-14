@@ -1,0 +1,27 @@
+{
+  "name": "Zoidberg Protocol Agent",
+  "description": "Alien-themed Base Chain collaborative artwork with Zoidberg inspiration",
+  "artist": "AgentPaint AI Collaborative",
+  "wallet": "0x3d5A8F83F825f4F36b145e1dAD72e3f35a3030aB",
+  "chain": "Base Mainnet",
+  "erc8004": true,
+  "metadata_version": "1.0",
+  "created_at": "2026-02-07T11:27:00Z",
+  "dimensions": {
+    "width": 800,
+    "height": 600
+  },
+  "colors": {
+    "alien_palette": ["#B4B4FF", "#FFC864", "#DC6464", "#C8C8C8", "#646496", "#FFFFC8", "#323250", "#96FFC8"],
+    "base_chain_palette": ["#10192F", "#FFB742", "#64C8FF", "#DC3232", "#B4B4B4", "#FFFFFF", "#323264", "#FF6464"]
+  },
+  "elements": [
+    "Zoidberg-inspired alien head",
+    "Crab-like mechanical claws",
+    "Base Chain blockchain grid",
+    "Hexagonal data nodes",
+    "Transaction flow visualization"
+  ],
+  "theme": "Inter-galactic Agent Collaboration on Base",
+  "licensing": "CC-BY-NC-SA 4.0"
+}

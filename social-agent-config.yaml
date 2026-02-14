@@ -1,0 +1,55 @@
+# Social Agent Configuration
+agent_name: social_agent
+schedule: "0 */4 * * *"  # Every 4 hours
+timezone: "UTC"
+enabled: true
+
+tasks:
+  post_content:
+    frequency: daily
+    platforms:
+      twitter:
+        quantity: 3
+        hashtag_limit: 3
+        account: "@aileph_im"
+    schedule:
+      - 10:00 UTC
+      - 14:00 UTC
+      - 18:00 UTC
+      - 22:00 UTC
+    format: json
+
+  engage_with_mentions:
+    frequency: hourly
+    platforms:
+      - twitter
+    actions:
+      - reply_to_mentions
+      - thank_shares
+      - answer_questions
+    quantity: 10
+    output: log
+
+  monitor_brand_mentions:
+    frequency: continuous
+    platforms:
+      - twitter
+      - reddit
+    keywords:
+      - "Aleph Cloud"
+      - "@aileph_im"
+      - "decentralized cloud"
+    output: json
+
+  retweet_relevant_content:
+    frequency: daily
+    quantity: 3
+    criteria:
+      - AI infrastructure
+      - GPU computing
+      - Cloud costs
+    output: log
+
+integrations:
+  - twitter_api
+  - bird_cli

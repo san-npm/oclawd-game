@@ -1,0 +1,44 @@
+# Content Agent Configuration
+agent_name: content_agent
+schedule: "0 9 * * 1-5"  # Weekdays at 9 AM
+timezone: "UTC"
+enabled: true
+
+tasks:
+  blog_article_generation:
+    frequency: weekly
+    quantity: 2
+    word_count: 2500
+    topics:
+      - "Why AI Teams Are Moving to Decentralized Cloud"
+      - "5 Ways Decentralized Cloud Saves AI Teams 80% on GPU Costs"
+    format: markdown
+    seo_optimized: true
+    target_keywords:
+      - decentralized cloud
+      - AI infrastructure
+      - GPU rental
+    output: markdown
+
+  social_snippet_generation:
+    frequency: daily
+    quantity: 5
+    platforms:
+      - twitter
+      - linkedin
+    types:
+      - educational_thread
+      - thought_leadership
+      - community_engagement
+      - promotional
+    format: json
+
+  tweet_idea_generation:
+    frequency: daily
+    quantity: 5
+    focus_areas:
+      - AI training costs
+      - GPU availability
+      - Cloud security
+      - Decentralization benefits
+    format: json
