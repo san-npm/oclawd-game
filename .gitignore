@@ -3,3 +3,6 @@ venv/
 __pycache__/
 *.pyc
 node_modules/
+credentials.json
+token.json
+.openclaw/
