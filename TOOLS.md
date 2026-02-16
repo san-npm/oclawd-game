@@ -35,16 +35,16 @@ Things like:
 
 Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
 
-### Peon-Ping (Sound Relay)
+### Peon-Ping (Local Only)
 
-- Relay runs on user's Mac via cloudflared tunnel
-- Current URL: `https://parameters-museums-jackson-upper.trycloudflare.com`
-- ⚠️ URL changes if cloudflared restarts — ask user for new one
-- Play sound: `curl -s -H "X-Volume: 0.8" "<URL>/play?file=packs/<pack>/sounds/<file>"`
+- Claude Code hooks plugin on user's Mac — NOT an HTTP server
+- Install: `curl -fsSL https://raw.githubusercontent.com/PeonPing/peon-ping/main/install.sh | bash -s -- --packs=murloc,peasant_fr,peon_fr,ra2_kirov,rick`
+- Plays sounds via `afplay` on macOS, triggered by Claude Code session events
+- **Cannot be triggered remotely from this VM** — only works in local Claude Code sessions
 - Packs: murloc, peasant_fr, peon_fr, ra2_kirov, rick
-- **Default packs: peon_fr and peasant_fr** (French human voices only)
-- Use peon_fr for task start/complete/acknowledgements
-- Only use murloc/rick/ra2_kirov if user specifically asks
+- Default packs: peon_fr and peasant_fr (French human voices only)
+- Commands: `peon toggle`, `peon status`
+- Attempted HTTP relay via cloudflared tunnel (Feb 14) — couldn't get node server running on Mac, abandoned
 
 ---
 

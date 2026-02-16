@@ -1,6 +1,6 @@
 # MEMORY.md — Dr Clawdberg's Long-Term Memory
 
-Last updated: 2026-02-14 (evening session)
+Last updated: 2026-02-15
 
 ## SelfClaw Identity
 - **Agent name on SelfClaw:** `clawdberg` (registered via web UI, not `dr-clawdberg`)
@@ -73,12 +73,27 @@ Last updated: 2026-02-14 (evening session)
   - Still need: tweet with Karma link, agentId 34, tag @Celo @CeloDevs
 
 ### BNB Lucky Draw (fork of Celottery)
-- Repo: https://github.com/clementfrmd/bnblottery
+- Repo: https://github.com/clementfrmd/bnblottery | Local: /tmp/bnblottery
 - Vercel: https://bnblottery.vercel.app
 - Chinese New Year Fire Horse theme
-- Build succeeds, ready for mainnet deploy
-- BSC stablecoins: USDT/USDC/FDUSD all 18 decimals
-- Needs: deployer key + BNB for gas
+- BSC stablecoins: USDT/USDC/FDUSD all 18 decimals (all 18 dec on BSC)
+- BSC mainnet tokens: USDT `0x55d398326f99059fF775485246999027B3197955`, USDC `0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d`, FDUSD `0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409`
+- **BSC Testnet (deployed & tested):**
+  - AgentRaffleV3: `0x0ebC3201aaD226f933e256c6FDC0c55Ed9290934`
+  - Mock USDT: `0x53298c20D3E29F9854A077AfB97dB9b0F713E4DD`
+  - Mock USDC: `0x7c010025DD07414E447de1958BfEfE3d1DE553e3`
+  - Mock FDUSD: `0x2E93692fD8a859A8882B5B0fc3753D97A29b92Ea`
+  - Full lifecycle tested: create → buy 3 tickets → draw → winner paid
+  - Aleph VRF proof: https://explorer.aleph.cloud/message/b103d40c1e104bea641082ba31fd5676f614f0aea4b2f41e3024c090073be5d7
+  - 63/63 hardhat tests passing
+- Frontend: testnet/mainnet toggle via `NEXT_PUBLIC_NETWORK` env var
+- Builds with `NODE_OPTIONS="--max-old-space-size=2048"` (server only has 3.6GB RAM)
+- **Hackathon:** "Good Vibes Only: OpenClaw Edition" on DoraHacks
+  - Deadline: Feb 19, 2026 3PM UTC
+  - Prize pool: $100K, 10 winners, 40% community + 60% judges
+  - Track: DeFi or Open
+  - Needs: BSC mainnet deploy (BNB for gas), DoraHacks submission
+- **Blocked:** BSC mainnet deploy needs real BNB
 
 ### Vins Fins (Wine Bar Website)
 - Repo: https://github.com/clementfrmd/vinsfins
@@ -122,3 +137,27 @@ Last updated: 2026-02-14 (evening session)
 - Uniswap V4 pool creation needs Permit2 approval (`0x000000000022D473030F116dDEE9F6B43aC78BA3`)
 - SelfClaw sponsorship needs 110% of token amount (10% buffer for pool creation)
 - Two token deploys happened — always verify which address is canonical
+- Next.js builds OOM on 3.6GB RAM without `NODE_OPTIONS="--max-old-space-size=2048"`
+- Twitter PPU API: 403 rate limit if posting multiple tweets rapidly — need spacing
+
+## Twitter @aileph_im (Aleph Cloud AI Agent)
+- **Handle:** @aileph_im | **Name:** Aileph
+- **Role:** AI agent of Aleph Cloud, supporting CMO (user is CMO)
+- **Mission:** Amplify Aleph Cloud, LibertAI, $ALEPH — NO Celo shilling
+- **NOT Dr Clawdberg** — separate identity on this account
+- **API creds:** `/root/openclaw/.env.twitter` (chmod 600, gitignored)
+- **API:** Pay-Per-Use ($5 budget loaded)
+- **Identity doc:** `/root/openclaw/memory/twitter-aileph.md`
+- **Dedup tracking:** `/root/openclaw/memory/twitter-replied.json`
+- **Cron jobs (active):**
+  - `twitter-mentions-hourly` — every 1h, check mentions + $ALEPH search
+  - `twitter-outreach-daily` — 10am + 6pm UTC, search AI agent convos + original content
+  - Added via gateway call workaround (device token mismatch)
+- **Official accounts:** @aleph_im (main), @Libertai_DAI (LibertAI)
+- **Blacklisted bots:** @moltbsky, @SlaveMachiene
+- **Key messaging:** Aleph Cloud = decentralized cloud, LibertAI = decentralized AI, $ALEPH token
+
+## Gateway Issues
+- Device token mismatch: `openclaw status` shows unauthorized
+- Cron tool fails but workaround: `openclaw gateway call cron.add --token "57c594abf8a3a069a6a105e8ef66d2faea170d69d397a319"`
+- Legacy `/root/.claude` dir may conflict with `/root/.openclaw`
