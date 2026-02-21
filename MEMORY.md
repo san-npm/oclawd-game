@@ -39,6 +39,17 @@ Last updated: 2026-02-15
 - **Sponsor wallet:** `0x5451bC61a58FfD5B6684a7EA1E2Ef0FDbd4ccBE6`
 - **Lesson:** SelfClaw sponsorship needs 110% of stated amount (10% buffer), Permit2 approval needed for Uniswap V4
 
+## OpenLetz (openletz.com)
+- **Entity:** COMMIT MEDIA SARL · RCS B276192
+- **Product:** Free simulator helping Luxembourg SMEs find government digital transformation grants (SME Package, Fit 4 Digital, Fit 4 AI, Fit 4 Innovation — up to €25k/70%). Also AI agents directory with EU compliance data, blog, and dev/AI consulting services.
+- **Stack:** Next.js 14, TypeScript, Tailwind, 6 languages (FR/EN/LB/DE/IT/PT)
+- **Repo:** https://github.com/san-npm/forge (local: /tmp/forge)
+- **Live:** https://openletz.com (alias: openletz.ai)
+- **My role:** Bob, AI Manager — BD, growth, marketing, content, CRM, CTO
+- **Email:** bob@openletz.com (IONOS SMTP/IMAP, creds at /root/.openletz-email)
+- **Phone:** +352 661 968 051
+- **Signature:** Bob · AI Manager — OpenLetz | bob@openletz.com | +352 661 968 051 | openletz.com
+
 ## Who I Am
 - **Name:** Dr Clawdberg (ref: Dr Zoidberg, Futurama)
 - **Emoji:** 🌟
@@ -47,6 +58,7 @@ Last updated: 2026-02-15
 
 ## Who My Human Is
 - Mac user (Apple Silicon), username: hodlmedia, machine: "Not-the-FBI"
+- **Twitter:** @3615crypto — this is the boss! Aileph cron should recognize and engage differently
 - Gmail: fermaudclement@gmail.com (app password configured)
 - Family names (protect in email ops): fermaud, fagone
 - Public IP: 88.207.128.80
@@ -58,7 +70,7 @@ Last updated: 2026-02-15
 ## Key Projects
 
 ### Celottery (Celo DeFi Raffle)
-- Repo: https://github.com/clementfrmd/celottery | Local: /tmp/celottery
+- Repo: https://github.com/san-npm/celottery | Local: /tmp/celottery
 - Live: https://celottery.vercel.app
 - Latest contract (AgentRaffleV3): `0x8a5859aB584f9b6F64769550862c58B9C5761C25` (Celo Mainnet)
 - Previous V2: `0xdB8a328fd0e14609937f38bD124950e1f70Fc8c2` (Celo Mainnet, has raffle #0 USDT)
@@ -73,7 +85,7 @@ Last updated: 2026-02-15
   - Still need: tweet with Karma link, agentId 34, tag @Celo @CeloDevs
 
 ### BNB Lucky Draw (fork of Celottery)
-- Repo: https://github.com/clementfrmd/bnblottery | Local: /tmp/bnblottery
+- Repo: https://github.com/san-npm/bnblottery | Local: /tmp/bnblottery
 - Vercel: https://bnblottery.vercel.app
 - Chinese New Year Fire Horse theme
 - BSC stablecoins: USDT/USDC/FDUSD all 18 decimals (all 18 dec on BSC)
@@ -96,7 +108,7 @@ Last updated: 2026-02-15
 - **Blocked:** BSC mainnet deploy needs real BNB
 
 ### Vins Fins (Wine Bar Website)
-- Repo: https://github.com/clementfrmd/vinsfins
+- Repo: https://github.com/san-npm/vinsfins
 - Live: https://vinsfins.vercel.app
 - Wine bar in Grund, Luxembourg (18 Rue Münster)
 - Luxury French aesthetic, sepia tones, admin panel at /admin

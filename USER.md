@@ -8,6 +8,11 @@ _Learn about the person you're helping. Update this as you go._
 - **Timezone:**
 - **Notes:**
 
+## Accounts
+- **Twitter:** @3615crypto
+- **Telegram:** @clementfd (ID: 735726338)
+- **GitHub:** san-npm
+
 ## Context
 
 _(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
