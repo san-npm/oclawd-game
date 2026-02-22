@@ -16,6 +16,38 @@
     "clean-code": {
       "version": "1.0.0",
       "installedAt": 1770669195340
+    },
+    "x-twitter": {
+      "version": "2.3.1",
+      "installedAt": 1771760117313
+    },
+    "crypto-market-data": {
+      "version": "1.0.2",
+      "installedAt": 1771760119740
+    },
+    "docker-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1771760121796
+    },
+    "telegram": {
+      "version": "1.0.1",
+      "installedAt": 1771760123694
+    },
+    "agent-directory": {
+      "version": "1.2.0",
+      "installedAt": 1771760131088
+    },
+    "solidity": {
+      "version": "1.0.0",
+      "installedAt": 1771760132979
+    },
+    "alchemy-web3": {
+      "version": "1.0.3",
+      "installedAt": 1771760305401
+    },
+    "crypto-stock-market-data": {
+      "version": "1.0.3",
+      "installedAt": 1771760309111
     }
   }
 }
