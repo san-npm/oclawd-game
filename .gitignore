@@ -6,3 +6,7 @@ node_modules/
 credentials.json
 token.json
 .openclaw/
+base-arbitrage-agent/
+venv/
+extra-contracts/
+inverse-protocol/
